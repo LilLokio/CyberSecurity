@@ -1,0 +1,250 @@
+body{
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    background-color: #FFFFFF;
+    font-style: normal;
+    color: #0E114A;
+    font-size: 24px;
+    line-height: 24px;
+    padding:0;
+    margin: 0;
+}
+
+h1,h2{
+    padding:0;
+    margin:0;
+}
+
+.eclipse {
+    width: 61px;
+    height: 55px;
+    background-image: url("../img/bgmain.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 11px;
+}
+
+.eclipse-number {
+    font-size: 32px;
+    line-height: 32px;
+}
+
+header{
+    display:flex;
+    margin-left:157px;
+    margin-top:231px;
+    margin-bottom:31px;
+}
+
+.header-title{
+    margin-top:10px;
+    width:456px;
+    height:51px;
+    font-size:32px;
+    line-height:32px;
+    font-weight:400;
+}
+
+.main-title{
+    margin-left:195px;
+    margin-bottom:30px;
+    font-size:40px;
+    line-height:40px;
+    height:62px;
+}
+
+.article-1{
+    margin-left:157px;
+    margin-bottom: 12px;
+    width:1113px;
+    height:91px;
+}
+
+.article-1-text{
+    margin:0;
+    padding:0;
+}
+
+.article-2 {
+    width: 1074px;
+    min-height: 309px;
+    border-radius: 15px;
+    padding: 0px;
+    position: relative;
+    margin-left: 157px;
+    margin-bottom:79px;
+}
+
+.article-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -13px;        
+    bottom: 0;
+    width: 13px;        
+    height: auto;       
+    background-image: url("../img/bgmain.jpg");
+    background-size: cover;
+    background-position: center 15%;
+    border-radius: 15px 0 0 15px;  
+    pointer-events: none;
+}
+
+.article-2-information{
+    width:1003px;
+    height:255px;
+    margin-left:21px;
+    margin-top: 23px;
+    margin-bottom:31px;
+    margin-left:37px;
+    font-size:20px;
+    line-height:20px;
+}
+
+.article-2-title{
+    font-weight:700;
+    padding-top: 23px;
+}
+
+.xx-1{
+    width:1074px;
+    height:427px;
+    margin-bottom: 131px;
+}
+
+.article-3 {
+    width: 1074px;
+    min-height: 290px;
+    border-radius: 15px;
+    padding: 0px;
+    position: relative;
+    margin-left: 157px;
+    margin-bottom:81px;
+}
+
+.article-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -13px;        
+    bottom: 0;
+    width: 13px;        
+    height: auto;       
+    background-image: url("../img/bgmain.jpg");
+    background-size: cover;
+    background-position: center 15%;
+    border-radius: 15px 0 0 15px;  
+    pointer-events: none;
+}
+
+.article-3-information{
+    width:1003px;
+    height:240px;
+    font-size:20px;
+    line-height:20px;
+    margin-left:21px;
+    margin-bottom:25px;
+    padding-top:25px;
+}
+
+.article-3-title{
+    font-weight:700;
+    margin-bottom:20px;
+    padding:0;
+}
+
+.article-3-text{
+    margin:0;
+    padding:0;
+    margin-bottom:20px;
+}
+
+.article-3-ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+.article-3-li{
+    margin-bottom:20px;
+}
+
+.xx-2{
+    width:1074px;
+    height:428px;
+    margin-bottom: 105px;
+}
+
+.article-4 {
+    width: 1074px;
+    min-height: 313px;
+    border-radius: 15px;
+    padding: 0px;
+    position: relative;
+    margin-left: 157px;
+    margin-bottom:64px;
+}
+
+.article-4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -13px;        
+    bottom: 0;
+    width: 13px;        
+    height: auto;       
+    background-image: url("../img/bgmain.jpg");
+    background-size: cover;
+    background-position: center 15%;
+    border-radius: 15px 0 0 15px;  
+    pointer-events: none;
+}
+
+.article-4-information{
+    width:1003px;
+    height:292px;
+    margin-left:21px;
+    padding-top:21px;
+    margin-right:36px;
+    font-size:20px;
+    line-height:20px;
+}
+
+.article-4-title{
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.article-4-ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    margin-bottom:20px;
+}
+
+.article-4-li{
+    margin-bottom:20px;
+}
+
+footer{
+    background-size: cover;
+    min-height: 189px;
+    margin-top:auto;
+    padding:0;
+    background:none;
+    background-color:#0E114A;
+}
+
+.footer-text{
+    padding:0;
+    margin:0;
+    padding-top:79px;
+    text-align:right;
+    font-size:20px;
+    line-height: 20px;
+    color:#FFFFFF;
+}
