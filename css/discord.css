@@ -22,6 +22,69 @@ h1,h2{
     padding:0;
     margin:0;
 }
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto; 
+    width: 100%; 
+}
+
+nav{
+  width:1200px;
+  margin-top: 75px;
+  margin-bottom: 83px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.logotype{
+  margin:0;
+  padding:0;
+  margin-right:150px;
+  color:#121661;
+}
+
+.logotype a:visited, .logotype a:active, .logotype a {
+  text-decoration: none;
+  color: #121661;
+}
+
+.navigation-topics a:active {
+  color: #121661;
+}
+
+.navigation{
+  list-style:none;
+  display:flex;
+  flex-wrap:wrap;
+  width: 1400px;
+  padding: 0;
+  margin:0;
+  padding-right: 70px;
+  justify-content: space-between;
+}
+
+.navigation-topics{
+  padding-bottom:0;
+  margin-bottom:0;
+}
+
+.navigation-topics:last-child {
+  margin-right: 0;
+}
+
+.navigation-topics a {
+  text-decoration: none;
+  color: #121661;         
+}
+
+.navigation-topics a:visited, .navigation-topics a:active {
+  color: #121661;
+}
+
+.logo{
+    display:flex;
+    margin-bottom:29px;
+}
 
 .eclipse {
     width: 61px;
@@ -41,13 +104,6 @@ h1,h2{
     line-height: 32px;
 }
 
-header{
-    display:flex;
-    margin-left:157px;
-    margin-top:231px;
-    margin-bottom:29px;
-}
-
 .header-title{
     margin-top:10px;
     width:456px;
@@ -55,20 +111,20 @@ header{
     font-size:32px;
     line-height:32px;
     font-weight:400;
+    color:#140F6D;
 }
 
 .main-title{
     font-weight:400;
     font-size:40px;
     line-height:40px;
-    margin-left:193px;
+    margin-left:36px;
     margin-bottom:54px;
     width:876px;
     height:63px;
 }
 
 .article-1{
-    margin-left:157px;
     margin-bottom:60px;
     width:1114px;
 }
@@ -87,7 +143,6 @@ header{
     border-radius: 15px;
     padding: 0px;
     position: relative;
-    margin-left: 166px;
     margin-bottom:98px;
 }
 
@@ -134,7 +189,6 @@ header{
     border-radius: 15px;
     padding: 0px;
     position: relative;
-    margin-left: 166px;
     margin-bottom:95px;
 }
 
@@ -181,7 +235,6 @@ header{
     border-radius: 15px;
     padding: 0px;
     position: relative;
-    margin-left: 166px;
     margin-bottom:132px;
 }
 
@@ -221,7 +274,6 @@ header{
     border-radius: 15px;
     padding: 0px;
     position: relative;
-    margin-left: 166px;
     margin-bottom:100px;
 }
 
@@ -264,11 +316,10 @@ header{
 
 .article-6 {
     width: 1074px;
-    min-height: 214px;
+    min-height: 1200px;
     border-radius: 15px;
     padding: 0px;
     position: relative;
-    margin-left: 166px;
     margin-bottom:100px;
 }
 
