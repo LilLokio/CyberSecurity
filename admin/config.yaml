@@ -1,0 +1,80 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Страницы"
+    label_singular: "Страницу"
+    description: "Основные страницы сайта"
+    files:
+      - name: "main"
+        label: "Главная страница"
+        file: "main.html"
+        fields:
+          - { label: "Заголовок", name: "title", widget: "string", default: "Безопасность в соцсетях" }
+          - { label: "Описание", name: "description", widget: "text", required: false }
+          - { label: "Контент", name: "body", widget: "markdown" }
+
+      - name: "passwords"
+        label: "Пароли"
+        file: "passwords.html"
+        fields:
+          - { label: "Заголовок", name: "title", widget: "string", default: "Как создать надёжный пароль" }
+          - { label: "Контент", name: "body", widget: "markdown" }
+
+      - name: "private"
+        label: "Приватность"
+        file: "private.html"
+        fields:
+          - { label: "Заголовок", name: "title", widget: "string", default: "Настройки приватности" }
+          - { label: "Контент", name: "body", widget: "markdown" }
+
+      - name: "fishing"
+        label: "Фишинг"
+        file: "fishing.html"
+        fields:
+          - { label: "Заголовок", name: "title", widget: "string", default: "Как не попасться на фишинг" }
+          - { label: "Контент", name: "body", widget: "markdown" }
+
+      - name: "2fa"
+        label: "Двухфакторная аутентификация"
+        file: "2fa.html"
+        fields:
+          - { label: "Заголовок", name: "title", widget: "string", default: "Что такое 2FA" }
+          - { label: "Контент", name: "body", widget: "markdown" }
+
+      - name: "discord"
+        label: "Безопасность в Discord"
+        file: "discord.html"
+        fields:
+          - { label: "Заголовок", name: "title", widget: "string", default: "Безопасность в Discord" }
+          - { label: "Контент", name: "body", widget: "markdown" }
+
+      - name: "telegram"
+        label: "Безопасность в Telegram"
+        file: "telegram.html"
+        fields:
+          - { label: "Заголовок", name: "title", widget: "string", default: "Безопасность в Telegram" }
+          - { label: "Контент", name: "body", widget: "markdown" }
+
+      - name: "max"
+        label: "Безопасность в Max"
+        file: "max.html"
+        fields:
+          - { label: "Заголовок", name: "title", widget: "string", default: "Безопасность в Max" }
+          - { label: "Контент", name: "body", widget: "markdown" }
+
+  - name: "articles"
+    label: "Статьи (дополнительные)"
+    label_singular: "Статью"
+    folder: "articles"
+    create: true
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Категория", name: "category", widget: "select", options: ["Пароли", "Приватность", "Фишинг", "2FA", "Discord", "Telegram", "Max"] }
+      - { label: "Дата", name: "date", widget: "datetime" }
+      - { label: "Текст", name: "body", widget: "markdown" }
