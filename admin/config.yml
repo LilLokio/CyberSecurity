@@ -13,7 +13,7 @@ collections:
     files:
       - name: "main"
         label: "Главная страница"
-        file: "main.html"
+        file: "index.html"
         fields:
           - { label: "Заголовок", name: "title", widget: "string", default: "Безопасность в соцсетях" }
           - { label: "Описание", name: "description", widget: "text", required: false }
