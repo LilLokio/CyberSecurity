@@ -41,8 +41,8 @@ body{
 }
 
 .eclipse{
-  width: 99px;
-  height: 95px;
+  width: 120px;
+  height: 100px;
   background: white;
   border-radius: 50%;
   display: flex;
@@ -84,6 +84,7 @@ nav{
   margin-top: 75px;
   margin-bottom: 83px;
   display:flex;
+  width:1400px;
   justify-content: space-between;
   width:1950px;
 }
@@ -117,7 +118,6 @@ nav{
 
 .navigation-topics{
   padding-bottom:0;
-  margin-bottom:0;
 }
 
 .navigation-topics:last-child {
