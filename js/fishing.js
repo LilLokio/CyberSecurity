@@ -73,3 +73,13 @@ document.querySelectorAll(".danger").forEach(el => {
 });
 
 document.getElementById("resetPhishingBtn").addEventListener("click", resetPhishing);
+
+function checkFishingComplete() {
+  if (foundCount === totalDangers) {
+    showNextPageButton();
+  }
+}
+
+document.querySelectorAll(".danger").forEach(el => {
+  el.addEventListener("click", checkFishingComplete);
+});

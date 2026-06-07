@@ -236,3 +236,9 @@ document.getElementById("prevBtn").addEventListener("click", prevQuestion);
 
 renderSteps();
 renderQuestion();
+
+document.getElementById("checkBtn").addEventListener("click", function() {
+  if (answerChecked[1] && answerChecked[2] && answerChecked[3]) {
+    showNextPageButton();
+  }
+});

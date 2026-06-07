@@ -1,26 +1,28 @@
 .main-title {
+  font-size: 40px;
+  line-height: 40px;
   margin-bottom: 74px;
   margin-left: 36px;
   height: 63px;
 }
-
+ 
 .article-1 {
   width: 1110px;
   height: 137px;
   margin-bottom: 56px;
 }
-
+ 
 .article-1-text {
   padding: 0;
   margin: 0;
 }
-
+ 
 .additional-title-1 {
   height: 53px;
   margin-bottom: 34px;
   font-weight: 400;
 }
-
+ 
 .article-2 {
   width: 1118px;
   height: 187px;
@@ -31,43 +33,44 @@
   border-radius: 15px;
   margin-bottom: 109px;
 }
-
+ 
 .article-2-ul {
   padding-top: 27px;
   margin-left: 24px;
   width: 1071px;
   list-style: none;
 }
-
+ 
 .article-2-li {
   font-size: 20px;
   line-height: 20px;
   margin-bottom: 20px;
 }
-
+ 
 span {
   font-weight: 700 !important;
 }
-
+ 
 .additional-title-2 {
   margin-bottom: 61px;
   height: 53px;
   font-weight: 400;
 }
-
+ 
 .article-3 {
   display: flex;
   margin-bottom: 64px;
 }
-
+ 
 .article-3-block-1 {
   width: 335px;
   min-height: 148px;
   border-radius: 15px;
+  padding: 0;
   position: relative;
   margin-right: 64px;
 }
-
+ 
 .article-3-block-1::before {
   content: "";
   position: absolute;
@@ -77,19 +80,20 @@ span {
   height: 13px;
   background-image: url("../img/bgmain.jpg");
   background-size: cover;
-  background-position: center 15%;
+  background-position: center 70%;
   border-radius: 15px 15px 0 0;
   pointer-events: none;
 }
-
+ 
 .article-3-block-2 {
   width: 334px;
   min-height: 148px;
   border-radius: 15px;
+  padding: 0;
   position: relative;
   margin-right: 45px;
 }
-
+ 
 .article-3-block-2::before {
   content: "";
   position: absolute;
@@ -99,19 +103,20 @@ span {
   height: 13px;
   background-image: url("../img/bgmain.jpg");
   background-size: cover;
-  background-position: center 15%;
+  background-position: center 70%;
   border-radius: 15px 15px 0 0;
   pointer-events: none;
 }
-
+ 
 .article-3-block-3 {
   width: 335px;
   min-height: 148px;
   border-radius: 15px;
+  padding: 0;
   position: relative;
   margin-right: 0;
 }
-
+ 
 .article-3-block-3::before {
   content: "";
   position: absolute;
@@ -121,11 +126,11 @@ span {
   height: 13px;
   background-image: url("../img/bgmain.jpg");
   background-size: cover;
-  background-position: center 15%;
+  background-position: center 70%;
   border-radius: 15px 15px 0 0;
   pointer-events: none;
 }
-
+ 
 .article-3-information-1,
 .article-3-information-2,
 .article-3-information-3 {
@@ -136,18 +141,19 @@ span {
   margin-top: 34px;
   margin-bottom: 34px;
 }
-
+ 
 .article-3-information-1-title,
 .article-3-information-2-title,
 .article-3-information-3-title {
   font-weight: 700;
 }
-
+ 
+ 
 .game {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+ 
 .card {
   background: white;
   border-radius: 22px;
@@ -155,12 +161,12 @@ span {
   box-shadow: 0 20px 50px rgba(61, 93, 255, 0.12);
   border: 1px solid #dfe5ff;
 }
-
+ 
 .card > p {
   color: #6b75a7;
   margin-bottom: 24px;
 }
-
+ 
 .email {
   background: #1a1f2e;
   color: #e0e5ff;
@@ -169,16 +175,16 @@ span {
   line-height: 1.8;
   font-size: 15px;
 }
-
+ 
 .email-header {
   margin-bottom: 20px;
 }
-
+ 
 .email hr {
   border-color: #2a3042;
   margin: 16px 0;
 }
-
+ 
 .danger {
   border: 1px solid #ff6b6b;
   border-radius: 6px;
@@ -187,18 +193,18 @@ span {
   transition: 0.2s;
   display: inline-block;
 }
-
+ 
 .danger:hover {
   background: rgba(255, 107, 107, 0.2);
   transform: scale(1.02);
 }
-
+ 
 .danger.found {
   background: rgba(255, 107, 107, 0.35);
   border-color: #ff4444;
   text-decoration: line-through;
 }
-
+ 
 .stats {
   display: flex;
   justify-content: space-between;
@@ -208,13 +214,13 @@ span {
   background: #f8f9ff;
   border-radius: 14px;
 }
-
+ 
 #foundText {
   font-size: 18px;
   font-weight: bold;
   color: #4c63f1;
 }
-
+ 
 button {
   border: none;
   cursor: pointer;
@@ -223,22 +229,22 @@ button {
   font-family: inherit;
   font-size: 14px;
 }
-
+ 
 .primary {
   background: #4c63f1;
   color: white;
 }
-
+ 
 .secondary {
   background: white;
   color: #40518c;
   border: 1px solid #ccd5f5;
 }
-
+ 
 .secondary:hover {
   background: #f0f2ff;
 }
-
+ 
 .feedback {
   display: none;
   margin-top: 22px;
@@ -248,16 +254,16 @@ button {
   border: 1px solid #9de0b6;
   color: #155c35;
 }
-
+ 
 .feedback.show {
   display: block;
 }
-
+ 
 .phishing-list {
   margin-top: 12px;
   padding-left: 20px;
 }
-
+ 
 .phishing-list li {
   margin: 8px 0;
 }

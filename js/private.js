@@ -175,9 +175,9 @@ function checkPrivacy() {
   if (isPrivateCorrect && isFriendsCorrect && isPublicCorrect) {
     feedback.innerHTML = `
       ✅ Отлично! Вы правильно распределили данные.<br><br>
-      <b>🔒 Только я:</b> номер телефона, домашний адрес, паспортные данные, дата рождения.<br>
-      <b>👥 Друзья:</b> фото с друзьями, личные истории, город проживания.<br>
-      <b>🌍 Все:</b> публичные посты.
+      <b>Только я:</b> номер телефона, домашний адрес, паспортные данные, дата рождения.<br>
+      <b>Друзья:</b> фото с друзьями, личные истории, город проживания.<br>
+      <b>Все:</b> публичные посты.
     `;
     feedback.classList.remove("error");
     feedback.classList.add("show");
@@ -194,3 +194,10 @@ document.getElementById("checkBtn").addEventListener("click", checkPrivacy);
 document.getElementById("resetBtn").addEventListener("click", resetAll);
 
 initDragAndDrop();
+
+document.getElementById("checkBtn").addEventListener("click", function() {
+  const feedback = document.getElementById("privacyFeedback");
+  if (feedback.classList.contains("show") && !feedback.classList.contains("error")) {
+    showNextPageButton();
+  }
+});
