@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&&display=swap" rel="stylesheet">
   <link href="css/fishing.css" rel="stylesheet">
   <link href="css/common.css" rel="stylesheet">
-  <title>Fishing</title>
+  <title>Фишинг</title>
 </head>
 <body>
 <div class="wrapper">
@@ -79,40 +79,32 @@
       <div class="card">
         <h2>Найдите все подозрительные элементы в письме</h2>
         <p>Кликните на все элементы, которые выглядят подозрительно (фишинговые признаки).</p>
-
         <div class="email" id="email">
           <div class="email-header">
             <p><strong>От:</strong> <span class="danger" data-danger="sender">security@sberb4nk-online.ru</span></p>
             <p><strong>Тема:</strong> <span class="danger" data-danger="subject">СРОЧНО: ваш аккаунт будет заблокирован через 24 часа!</span></p>
           </div>
-
           <hr>
-
           <p>Уважаемый клиент,</p>
-
           <p>
             Наша служба безопасности зафиксировала
             <span class="danger" data-danger="suspicious_activity">подозрительную активность</span>
             на вашем счёте. Во избежание блокировки необходимо
             <span class="danger" data-danger="request_data">срочно подтвердить личные данные</span>.
           </p>
-
           <p>
             Перейдите по ссылке:
             <span class="danger" data-danger="link">http://sberbank-secure-login.verification.com/confirm</span>
           </p>
-
           <p>
             Прикреплённый файл:
             <span class="danger" data-danger="file">instruktsiya_SB.exe</span>
           </p>
         </div>
-
         <div class="stats">
           <p id="foundText">🔍 Найдено: 0 из 6</p>
           <button id="resetPhishingBtn" class="secondary">🔄 Сбросить</button>
         </div>
-
         <div class="feedback" id="phishingFeedback"></div>
       </div>
     </div>
