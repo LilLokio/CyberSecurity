@@ -67,6 +67,18 @@ collections:
         fields:
           - { label: "Заголовок", name: "title", widget: "string", default: "Безопасность в Max" }
           - { label: "Контент", name: "body", widget: "markdown" }
+      - name: "help"
+        label: "Помощь при взломе"
+        file: "help.html"
+        fields:
+          - { label: "Заголовок", name: "title", widget: "string", default: "Безопасность в Max" }
+          - { label: "Контент", name: "body", widget: "markdown" }
+      - name: "checklist"
+        label: "Помощь при взломе"
+        file: "checklist.html"
+        fields:
+          - { label: "Заголовок", name: "title", widget: "string", default: "Безопасность в Max" }
+          - { label: "Контент", name: "body", widget: "markdown" }
 
   - name: "articles"
     label: "Статьи (дополнительные)"
