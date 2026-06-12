@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&&display=swap" rel="stylesheet">
+  <link href="css/common.css" rel="stylesheet">
+  <link href="css/checklist.css" rel="stylesheet">
+  <title>2FA</title>
+  <title>Чек-лист безопасности</title>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+            <h2 class="logotype"><a href="index.html">CyberSec</a></h2>
+            <ul class="navigation">
+                <li class="navigation-topics"><a href="passwords.html">Пароли</a>
+                </li>
+                <li class="navigation-topics"><a href="2fa.html">2FA</a>
+                </li>
+                <li class="navigation-topics"><a href="fishing.html">Фишинг</a>
+                </li>
+                <li class="navigation-topics"><a href="private.html">Приватность</a>
+                </li>
+                <li class="navigation-topics dropdown">
+                <a href="#" class="dropdown-toggle">Соцсети ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="telegram.html">Telegram</a></li>
+                    <li><a href="max.html">Max</a></li>
+                    <li><a href="discord.html">Discord</a></li>
+                </ul>
+                </li>
+                <li class="navigation-topics border-box"><a class="border-box-text" href="help.html">Помощь при взломе</a></li>
+            </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="hero">
+                <div class="hero-top">
+                    <h1>Проверь безопасность<br>своего аккаунта</h1>
+                    <img src="img/checklist.png" alt="checklist">
+                </div>
+                <div class="hero-bottom">
+                    <p>Этот чек-лист покажет общий уровень безопасности Вашего аккаунта. Отметьте, какие меры защиты уже включены.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Чек-лист безопасности</h2>
+                <div id="checklist"></div>
+                <button onclick="showResult()">Показать результат</button>
+            </div>
+            <div class="card result-card">
+                <h2>Ваш результат</h2>
+                <div class="diagram" id="diagram">
+                    <div class="diagram-inner"></div>
+                </div>
+                <div class="result-title">Результат</div>
+                <div class="score" id="score">0 / 8</div>
+                <div class="level" id="level">Выберите ответы</div>
+            </div>
+            <script src="js/checklist.js"></script>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-left">
+            <p class="footer-copy">© CyberSec 2026</p>
+            <a href="#" class="footer-link">Обратная связь</a>
+            </div>
+            <p class="footer-text">Цифровая безопасность начинается с тебя</p>
+        </div>
+    </footer>
+</body>
+</html>

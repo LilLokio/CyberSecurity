@@ -38,9 +38,9 @@
   bottom: 0;
   width: 13px;
   height: auto;
-  background-image: url("../img/bgmain.jpg");
+  background-image: url("../img/bgmainborder.jpg");
   background-size: cover;
-  background-position: 37% 15%;
+  background-position: center;
   border-radius: 15px 0 0 15px;
   pointer-events: none;
 }
@@ -85,7 +85,7 @@
   bottom: 0;
   width: 13px;
   height: auto;
-  background-image: url("../img/bgmain.jpg");
+  background-image: url("../img/bgmainborder.jpg");
   background-size: cover;
   background-position: 37% 15%;
   border-radius: 15px 0 0 15px;
@@ -116,7 +116,7 @@
  
 .article-4 {
   width: 1074px;
-  min-height: 146px;
+  height: 518px;
   border-radius: 15px;
   padding: 0;
   position: relative;
@@ -131,7 +131,7 @@
   bottom: 0;
   width: 13px;
   height: auto;
-  background-image: url("../img/bgmain.jpg");
+  background-image: url("../img/bgmainborder.jpg");
   background-size: cover;
   background-position: 37% 15%;
   border-radius: 15px 0 0 15px;
@@ -139,10 +139,10 @@
 }
  
 .article-4-information {
-  margin-left: 35px;
+  margin-left: 22px;
   padding-top: 18px;
   margin-bottom: 12px;
-  width: 1003px;
+  width: 1033px;
   height: 101px;
   font-size: 20px;
   line-height: 20px;
@@ -150,9 +150,21 @@
  
 .article-4-title {
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
  
+.article-4-text{
+  margin-bottom:40px;
+}
+
+.article-4-photo{
+  margin-left:15px;
+}
+
+.article-4-photo img{
+  margin-right:25px;
+}
+
 .article-5 {
   width: 1074px;
   min-height: 208px;
@@ -170,7 +182,7 @@
   bottom: 0;
   width: 13px;
   height: auto;
-  background-image: url("../img/bgmain.jpg");
+  background-image: url("../img/bgmainborder.jpg");
   background-size: cover;
   background-position: 37% 15%;
   border-radius: 15px 0 0 15px;
@@ -217,9 +229,9 @@
   bottom: 0;
   width: 13px;
   height: auto;
-  background-image: url("../img/bgmain.jpg");
+  background-image: url("../img/bgmainborder.jpg");
   background-size: cover;
-  background-position: 37% 15%;
+  background-position: center;
   border-radius: 15px 0 0 15px;
   pointer-events: none;
 }

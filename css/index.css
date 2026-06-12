@@ -169,6 +169,38 @@ main {
   list-style: none;
 }
 
+.discord{
+  margin-right:130px;
+}
+
+.safety-check-item {
+  display: flex;
+  align-items: center;
+}
+
+.safety-btn {
+  width: 383px;
+  height: 63px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 30px;
+  font-family: "Anonymous Pro", monospace;
+  font-size: 24px;
+  line-height: 1;
+  color: #121661;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.safety-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 28px rgba(139, 22, 143, 0.4);
+}
+
 .eclipse {
   width: 120px;
   height: 120px;
@@ -236,7 +268,6 @@ img {
   min-height: 304px;
   border-radius: 15px;
   position: relative;
-  margin-bottom: 83px;
   padding-bottom:0;
 }
 
@@ -272,13 +303,41 @@ img {
 }
 
 footer {
-  background-color: #8B65B0;
+  background-color: #8B65B0AD;
+  margin-top: auto;
   min-height: 189px;
-  width: 100%;
-  box-sizing: border-box;
+}
+
+.footer-inner {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  height: 189px;
+  padding: 0 40px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-copy {
+  font-size: 20px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.footer-link {
+  font-size: 20px;
+  color: #FFFFFF;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.footer-link:hover {
+  opacity: 1;
 }
 
 .footer-text {
@@ -286,5 +345,4 @@ footer {
   line-height: 20px;
   color: #FFFFFF;
   margin: 0;
-  padding: 0;
 }

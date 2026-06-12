@@ -1,3 +1,4 @@
+const STORAGE_KEY = 'fishing_state';
 const totalDangers = 6;
 let foundCount = 0;
 let foundItems = new Set();
@@ -11,16 +12,45 @@ const dangerDescriptions = {
   file: "Опасный .exe файл — вероятно, вирус или троян"
 };
 
+function saveState() {
+  sessionStorage.setItem(STORAGE_KEY, JSON.stringify({
+    foundCount,
+    foundItems: Array.from(foundItems)
+  }));
+}
+
+function loadState() {
+  const saved = sessionStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    const state = JSON.parse(saved);
+    foundCount = state.foundCount;
+    foundItems = new Set(state.foundItems);
+
+    foundItems.forEach(id => {
+      const el = document.querySelector(`[data-danger="${id}"]`);
+      if (el) el.classList.add("found");
+    });
+
+    document.getElementById("foundText").innerHTML = `Найдено: ${foundCount} из ${totalDangers}`;
+
+    if (foundCount === totalDangers) {
+      showSuccess();
+      showNextPageButton();
+    }
+  }
+}
+
 function markDanger(element) {
   const dangerId = element.getAttribute("data-danger");
-  
+
   if (!foundItems.has(dangerId)) {
     foundItems.add(dangerId);
     foundCount++;
     element.classList.add("found");
-    
+
     document.getElementById("foundText").innerHTML = `Найдено: ${foundCount} из ${totalDangers}`;
-    
+    saveState();
+
     if (foundCount === totalDangers) {
       showSuccess();
     }
@@ -29,25 +59,25 @@ function markDanger(element) {
 
 function showSuccess() {
   const feedback = document.getElementById("phishingFeedback");
-  
+
   let html = `
     ✅ Отлично! Вы нашли все 6 признаков фишингового письма!
     <br><br>
     <strong>Что было подозрительным:</strong>
     <ul class="phishing-list">
   `;
-  
+
   Object.entries(dangerDescriptions).forEach(([id, desc]) => {
     html += `<li>${desc}</li>`;
   });
-  
+
   html += `
     </ul>
     <br>
     <strong>💡 Совет:</strong> Никогда не переходите по подозрительным ссылкам, 
     не открывайте вложения из неизвестных писем и не сообщайте личные данные.
   `;
-  
+
   feedback.innerHTML = html;
   feedback.classList.add("show");
 }
@@ -55,20 +85,22 @@ function showSuccess() {
 function resetPhishing() {
   foundCount = 0;
   foundItems.clear();
-  
+  sessionStorage.removeItem(STORAGE_KEY);
+
   document.querySelectorAll(".danger").forEach(el => {
     el.classList.remove("found");
   });
-  
+
   document.getElementById("foundText").innerHTML = `Найдено: 0 из ${totalDangers}`;
-  
+
   const feedback = document.getElementById("phishingFeedback");
   feedback.classList.remove("show");
 }
 
 document.querySelectorAll(".danger").forEach(el => {
-  el.addEventListener("click", function() {
+  el.addEventListener("click", function () {
     markDanger(this);
+    checkFishingComplete();
   });
 });
 
@@ -80,6 +112,4 @@ function checkFishingComplete() {
   }
 }
 
-document.querySelectorAll(".danger").forEach(el => {
-  el.addEventListener("click", checkFishingComplete);
-});
+loadState();

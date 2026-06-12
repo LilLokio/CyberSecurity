@@ -1,3 +1,23 @@
+const STORAGE_KEY = 'passwords_state';
+
+function saveState() {
+  sessionStorage.setItem(STORAGE_KEY, JSON.stringify({
+    currentStep,
+    userAnswers,
+    answerChecked
+  }));
+}
+
+function loadState() {
+  const saved = sessionStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    const state = JSON.parse(saved);
+    currentStep = state.currentStep;
+    userAnswers = state.userAnswers;
+    answerChecked = state.answerChecked;
+  }
+}
+
 let currentStep = 1;
 let userAnswers = { 1: null, 2: [], 3: null };
 let answerChecked = { 1: false, 2: false, 3: false };
@@ -17,7 +37,7 @@ const questions = {
   },
   2: {
     title: "Где Саша ошибся?",
-    description: "Саша выбрал пароль Sasha2005 для почты и записал: «Пароль от почты: Skazo4ka».",
+    description: "Саша придумал пароль Sasha2005 и записал его в заметках: «Пароль от почты: Sasha2005».",
     options: [
       { id: "short", text: "Пароль слишком короткий", correct: true },
       { id: "special", text: "Не использовал специальные символы", correct: true },
@@ -67,6 +87,17 @@ function checkStrengthLive(pass) {
   }
 }
 
+function restoreFeedbackText(feedback) {
+  const q = questions[currentStep];
+  if (q.type === "radio") {
+    feedback.textContent = "✅ Правильно! Этот пароль длинный, содержит разные символы и не включает личную информацию.";
+  } else if (q.type === "checkbox") {
+    feedback.textContent = "✅ Верно! Ошибки: короткий пароль, нет спецсимволов, хранение пароля в заметках.";
+  } else if (q.type === "password") {
+    feedback.textContent = "✅ Хороший пароль! Он длинный, содержит буквы, цифры и специальные символы.";
+  }
+}
+
 function renderQuestion() {
   const container = document.getElementById("questionContent");
   const q = questions[currentStep];
@@ -110,6 +141,7 @@ function renderQuestion() {
         userAnswers[currentStep] = e.target.value;
         answerChecked[currentStep] = false;
         document.getElementById("questionFeedback").classList.remove("show", "error");
+        saveState();
       });
     });
   } else if (q.type === "checkbox") {
@@ -127,6 +159,7 @@ function renderQuestion() {
         }
         answerChecked[currentStep] = false;
         document.getElementById("questionFeedback").classList.remove("show", "error");
+        saveState();
       });
     });
   } else if (q.type === "password") {
@@ -136,6 +169,7 @@ function renderQuestion() {
       answerChecked[currentStep] = false;
       document.getElementById("questionFeedback").classList.remove("show", "error");
       checkStrengthLive(e.target.value);
+      saveState();
     });
     if (userAnswers[3]) checkStrengthLive(userAnswers[3]);
   }
@@ -145,6 +179,7 @@ function renderQuestion() {
   const feedback = document.getElementById("questionFeedback");
   if (answerChecked[currentStep]) {
     feedback.classList.add("show");
+    restoreFeedbackText(feedback);
   }
 }
 
@@ -156,7 +191,7 @@ function checkAnswer() {
   if (q.type === "radio") {
     const selected = userAnswers[currentStep];
     isCorrect = selected === q.correctAnswer;
-    
+
     if (isCorrect) {
       feedback.textContent = "✅ Правильно! Этот пароль длинный, содержит разные символы и не включает личную информацию.";
       feedback.classList.remove("error");
@@ -168,10 +203,10 @@ function checkAnswer() {
   } else if (q.type === "checkbox") {
     const selected = userAnswers[currentStep] || [];
     const correctAnswers = q.correctAnswers;
-    
+
     isCorrect = selected.length === correctAnswers.length &&
       correctAnswers.every(answer => selected.includes(answer));
-    
+
     if (isCorrect) {
       feedback.textContent = "✅ Верно! Ошибки: короткий пароль, нет спецсимволов, хранение пароля в заметках.";
       feedback.classList.remove("error");
@@ -194,7 +229,7 @@ function checkAnswer() {
   } else if (q.type === "password") {
     const password = userAnswers[currentStep] || "";
     isCorrect = isStrongPassword(password);
-    
+
     if (isCorrect) {
       feedback.textContent = "✅ Хороший пароль! Он длинный, содержит буквы, цифры и специальные символы.";
       feedback.classList.remove("error");
@@ -204,9 +239,10 @@ function checkAnswer() {
       feedback.classList.add("show", "error");
     }
   }
-  
+
   if (isCorrect) {
     answerChecked[currentStep] = true;
+    saveState();
   }
 }
 
@@ -217,6 +253,7 @@ function nextQuestion() {
       return;
     }
     currentStep++;
+    saveState();
     renderQuestion();
     renderSteps();
   }
@@ -225,6 +262,7 @@ function nextQuestion() {
 function prevQuestion() {
   if (currentStep > 1) {
     currentStep--;
+    saveState();
     renderQuestion();
     renderSteps();
   }
@@ -234,11 +272,18 @@ document.getElementById("checkBtn").addEventListener("click", checkAnswer);
 document.getElementById("nextBtn").addEventListener("click", nextQuestion);
 document.getElementById("prevBtn").addEventListener("click", prevQuestion);
 
-renderSteps();
-renderQuestion();
-
-document.getElementById("checkBtn").addEventListener("click", function() {
+document.getElementById("checkBtn").addEventListener("click", function () {
   if (answerChecked[1] && answerChecked[2] && answerChecked[3]) {
     showNextPageButton();
   }
 });
+
+
+loadState();
+renderSteps();
+renderQuestion();
+
+
+if (answerChecked[1] && answerChecked[2] && answerChecked[3]) {
+  showNextPageButton();
+}

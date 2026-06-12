@@ -1,0 +1,248 @@
+.main-title{
+    font-weight:400;
+    line-height:40px;
+    font-size:40px;
+    margin-bottom:72px;
+}
+
+.article-1{
+    width:1117px;
+    margin-bottom:75px;
+}
+
+.article-1-text{
+    font-size:24px;
+    line-height:24px;
+}
+
+.article-2-title{
+    font-size:24px;
+    line-height:24px;
+    margin-bottom:65px;
+}
+
+.article-2 {
+  width: 1074px;
+  min-height: 469px;
+  border-radius: 15px;
+  padding: 0;
+  position: relative;
+  margin-bottom: 108px;
+}
+ 
+.article-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -13px;
+  bottom: 0;
+  width: 13px;
+  background-image: url("../img/bgmain.jpg");
+  background-position: 45% center;  
+  background-repeat: no-repeat;
+  border-radius: 15px 0 0 15px;
+  pointer-events: none;
+}
+
+.article-2-information{
+    width:1003px;
+    margin-left:21px;
+    padding-top:12px;
+}
+
+.article-2-ul{
+    list-style:none;
+    width:970px;
+}
+
+.article-2-li{
+    margin:0;
+    padding:0;
+    font-size:20px;
+    line-height:20px;
+}
+
+.article-2-li-title{
+    margin-bottom:30px;
+}
+
+.article-2-li-text{
+    margin-bottom:40px;
+}
+
+.article-2-li-text-no-margin{
+    margin-bottom:0;
+}
+
+.article-3-title{
+    font-size:24px;
+    line-height:24px;
+    margin-bottom:26px;
+}
+
+.article-3-image{
+    margin-left:117px;
+    margin-bottom:20px;
+}
+
+.article-3-image ul{
+    list-style:none;
+    display:flex;
+}
+
+.image-telegram{
+    margin-right:347px;
+}
+
+.image-discord{
+    margin-right:304px;
+}
+
+.article-3{
+    display:flex;
+    margin-bottom:127px;
+}
+
+.article-3-discord {
+  width: 302px;
+  border-radius: 15px;
+  padding: 0;
+  position: relative;
+  margin-right:29px;
+}
+ 
+.article-3-discord::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 0;
+  right: 0;
+  height: 13px;
+  background-image: url("../img/bgmain.jpg");
+  background-size: cover;
+  background-position: center 75%;
+  border-radius: 15px 15px 0 0;
+  pointer-events: none;
+}
+
+.article-3-discord-information{
+    margin-left:21px;
+    padding-top:25px;
+    width:255px;
+    text-align:center;
+}
+
+.article-3-social-title{
+    font-weight:400;
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.article-3-text{
+    font-size:20px;
+    line-height:20px;
+}
+
+.article-3-forms{
+    color:#0E114A;
+    margin-bottom:20px;
+    display: inline-block; 
+}
+
+.article-3-telegram {
+  width: 344px;
+  border-radius: 15px;
+  padding: 0;
+  position: relative;
+  margin-right:32px;
+}
+ 
+.article-3-telegram::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 0;
+  right: 0;
+  height: 13px;
+  background-image: url("../img/bgmain.jpg");
+  background-size: cover;
+  background-position: center 75%;
+  border-radius: 15px 15px 0 0;
+  pointer-events: none;
+}
+
+.article-3-telegram-information{
+    width:328px;
+    margin-left:8px;
+    padding-top:21px;
+    text-align:center;
+}
+
+.article-3-max {
+  width: 390px;
+  border-radius: 15px;
+  padding: 0;
+  position: relative;
+}
+ 
+.article-3-max::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 0;
+  right: 0;
+  height: 13px;
+  background-image: url("../img/bgmain.jpg");
+  background-size: cover;
+  background-position: center 75%;
+  border-radius: 15px 15px 0 0;
+  pointer-events: none;
+}
+
+.article-3-max-information{
+    width:329px;
+    margin-left:27px;
+    padding-top:30px;
+    text-align:center;
+}
+
+span{
+    text-decoration: underline;
+}
+
+.article-4 {
+  width: 1103px;
+  min-height: 183px;
+  border-radius: 15px;
+  padding: 0;
+  position: relative;
+  margin-bottom: 108px;
+}
+ 
+.article-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -13px;
+  bottom: 0;
+  width: 13px;
+  background-image: url("../img/bgmain.jpg");
+  background-position: 45% center;  
+  background-repeat: no-repeat;
+  border-radius: 15px 0 0 15px;
+  pointer-events: none;
+}
+
+.article-4-information{
+    width:1039px;
+    margin-left:22px;
+    padding-top:7px;
+}
+
+.article-4-text{
+    margin-bottom:20px;
+}
+
+.index{
+    color:#0E114A;
+}

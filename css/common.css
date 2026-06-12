@@ -8,7 +8,7 @@
 body {
   font-family: "Anonymous Pro", monospace;
   font-weight: 400;
-  background-color: #FFFFFF;
+  background-color: #F1F0FA;
   font-style: normal;
   color: #0E114A;
   font-size: 24px;
@@ -146,17 +146,48 @@ nav {
 }
 
 footer {
-  background-color: #8B65B0;
+  background-color: #8B65B0AD;
   margin-top: auto;
   min-height: 189px;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 189px;
+  padding: 0 40px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-copy {
+  font-size: 20px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.footer-link {
+  font-size: 20px;
+  color: #FFFFFF;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.footer-link:hover {
+  opacity: 1;
 }
 
 .footer-text {
   font-size: 20px;
   line-height: 20px;
   color: #FFFFFF;
-  text-align: right;
-  padding-top: 79px;
+  margin: 0;
 }
 
 .dropdown {

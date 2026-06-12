@@ -17,7 +17,7 @@
 
 .article-2 {
   width: 1074px;
-  min-height: 193px;
+  height: 1723px;
   border-radius: 15px;
   position: relative;
   margin-bottom: 129px;
@@ -31,9 +31,9 @@
   bottom: 0;
   width: 13px;
   height: auto;
-  background-image: url("../img/bgmain.jpg");
+  background-image: url("../img/bgmainborder.jpg");
   background-size: cover;
-  background-position: center 15%;
+  background-position: 45% center;
   border-radius: 15px 0 0 15px;
   pointer-events: none;
 }
@@ -48,16 +48,28 @@
 
 .article-2-title {
   font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.article-2-text {
   margin-bottom: 20px;
 }
 
-.article-2-text-1 {
-  margin-bottom: 20px;
+.article-2-information-text{
+  margin-bottom:50px;
+}
+
+.article-2-photo{
+  margin-bottom:100px;
+}
+
+.article-2-photo img{
+  margin-right:44px;
 }
 
 .article-3 {
-  width: 1074px;
-  min-height: 369px;
+  width: 975px;
+  height: 677px;
   border-radius: 15px;
   position: relative;
   margin-bottom: 115px;
@@ -71,7 +83,7 @@
   bottom: 0;
   width: 13px;
   height: auto;
-  background-image: url("../img/bgmain.jpg");
+  background-image: url("../img/bgmainborder.jpg");
   background-size: cover;
   background-position: center 15%;
   border-radius: 15px 0 0 15px;
@@ -92,8 +104,12 @@
   margin-bottom: 20px;
 }
 
-.article-3-text-1 {
+.article-3-text {
   margin-bottom: 20px;
+}
+
+.article-3 img{
+  margin-top:20px;
 }
 
 .article-3-ul {
@@ -103,7 +119,7 @@
 }
 
 .article-3-li {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .xx-1 {
@@ -114,7 +130,7 @@
 
 .article-4 {
   width: 1074px;
-  min-height: 163px;
+  height: 506px;
   border-radius: 15px;
   position: relative;
   margin-bottom: 115px;
@@ -128,9 +144,9 @@
   bottom: 0;
   width: 13px;
   height: auto;
-  background-image: url("../img/bgmain.jpg");
+  background-image: url("../img/bgmainborder.jpg");
   background-size: cover;
-  background-position: center 15%;
+  background-position: 20% 15%;
   border-radius: 15px 0 0 15px;
   pointer-events: none;
 }
@@ -146,12 +162,22 @@
 
 .article-4-title {
   font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.article-4-text{
   margin-bottom: 20px;
+}
+.article-4-photo{
+  margin-bottom: 40px;
+}
+.article-4-photo img{
+  margin-right: 44px;
 }
 
 .article-5 {
   width: 1074px;
-  min-height: 273px;
+  height: 610px;
   border-radius: 15px;
   position: relative;
   margin-bottom: 101px;
@@ -165,9 +191,9 @@
   bottom: 0;
   width: 13px;
   height: auto;
-  background-image: url("../img/bgmain.jpg");
+  background-image: url("../img/bgmainborder.jpg");
   background-size: cover;
-  background-position: center 15%;
+  background-position: center;
   border-radius: 15px 0 0 15px;
   pointer-events: none;
 }
@@ -187,18 +213,24 @@
 }
 
 .article-5-text {
+  margin-bottom: 30px;
+}
+
+.article-5-information-text{
   margin-bottom: 40px;
 }
 
-.article-5-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.article-5-photo{
+  margin-bottom: 60px;
+}
+
+.article-5-photo img{
+  margin-right: 44px;
 }
 
 .article-6 {
   width: 1074px;
-  min-height: 141px;
+  height: 714px;
   border-radius: 15px;
   position: relative;
   margin-bottom: 101px;
@@ -212,9 +244,9 @@
   bottom: 0;
   width: 13px;
   height: auto;
-  background-image: url("../img/bgmain.jpg");
+  background-image: url("../img/bgmainborder.jpg");
   background-size: cover;
-  background-position: center 15%;
+  background-position:10% center;
   border-radius: 15px 0 0 15px;
   pointer-events: none;
 }
@@ -232,4 +264,60 @@
 .article-6-title {
   font-weight: 700;
   margin-bottom: 20px;
+}
+
+.article-6-information-text{
+  margin-bottom:20px;
+}
+
+.article-6-text{
+  margin-bottom:40px;
+}
+
+.article-6-photo{
+  margin-left:228px;
+}
+
+.article-6-photo img{
+  margin-right:122px;
+}
+
+.article-7 {
+  width: 1074px;
+  height: 274px;
+  border-radius: 15px;
+  position: relative;
+  margin-bottom: 101px;
+}
+
+.article-7::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -13px;
+  bottom: 0;
+  width: 13px;
+  height: auto;
+  background-image: url("../img/bgmainborder.jpg");
+  background-size: cover;
+  background-position:10% center;
+  border-radius: 15px 0 0 15px;
+  pointer-events: none;
+}
+
+.article-7-information{
+  width: 1003px;
+  margin-left: 21px;
+  padding-top: 23px;
+  margin-bottom: 9px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.article-7-title{
+  margin-bottom:20px;
+}
+
+.article-7-text{
+  margin-bottom:20px;
 }

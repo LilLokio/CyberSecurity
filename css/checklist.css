@@ -1,0 +1,167 @@
+nav{
+    margin-bottom:0;
+}
+
+.hero {
+  max-width: 900px;
+  margin: 0 auto 25px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(120, 95, 210, 0.35);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-top h1 {
+  margin-left:20px;
+  font-size: 40px;
+  line-height: 48px;
+  color: #140F6D;
+}
+
+.hero-top img {
+  width: 360px;
+  height: 200px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.hero-bottom p {
+  margin-left:30px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #0E114A;
+  opacity: 0.7;
+}
+
+.card {
+  max-width: 900px;
+  margin: 0 auto 25px;
+  background: white;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(120, 95, 210, 0.45);
+  font-size:16px;
+}
+
+h2 {
+  margin-bottom: 25px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 40px 1fr 160px;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+.num {
+  width: 32px;
+  height: 32px;
+  background: #f1ecff;
+  color: #6f52d9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.answers {
+  display: flex;
+  gap: 10px;
+}
+
+.answers input {
+  display: none;
+}
+
+.answers label {
+  width: 70px;
+  padding: 8px 0;
+  text-align: center;
+  border: 1px solid #d8d2f0;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #6f52d9;
+}
+
+.answers input:checked + label {
+  background: #7a5be8;
+  color: white;
+  border-color: #7a5be8;
+}
+
+button {
+  margin-top: 20px;
+  padding: 13px 28px;
+  border: none;
+  border-radius: 9px;
+  background: #7a5be8;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.result-card {
+  text-align: center;
+}
+
+.diagram {
+  width: 230px;
+  height: 230px;
+  margin: 25px auto;
+  border-radius: 50%;
+  background: conic-gradient(#7a5be8 0deg, #c4b5f5 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diagram::after {
+  display: none;
+}
+
+.diagram-inner {
+  width: 170px;
+  height: 170px;
+  background: white;
+  border-radius: 50%;
+}
+
+.result-title {
+  color: #7a5be8;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.score {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.level {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+@media (max-width: 700px) {
+  .item {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .answers {
+    grid-column: 2 / 3;
+  }
+}
+
